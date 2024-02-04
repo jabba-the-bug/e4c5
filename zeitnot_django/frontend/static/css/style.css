@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Roboto;
+    src: url('/static/font/Roboto/Roboto-Regular.ttf');
+}
+
+body, html{
+    background: #bcb77d;
+    overflow:hidden;
+    font-family: Roboto;
+}

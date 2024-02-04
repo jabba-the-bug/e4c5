@@ -1,0 +1,6 @@
+uwsgi --ini uwsgi.ini --static-map /static=/var/www/static
+python3 manage.py collectstatic -i node_modules
+
+
+Certificate is saved at: /etc/letsencrypt/live/e4c5.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/e4c5.com/privkey.pem

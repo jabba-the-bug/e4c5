@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Zeitnot</title>
+    <script src="/stockfish.js"></script>
+</head>
+<body class="bg-white">
+    <div id="navbar"></div>
+    {% block content %}{% endblock %}
+    <script src="{% static '/js_env/dist/js/app.bundle.js' %}"></script>
+</body>
+</html>

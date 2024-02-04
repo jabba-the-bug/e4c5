@@ -1,0 +1,21 @@
+FROM debian:latest
+
+# General
+RUN apt-get update --fix-missing && apt-get -y upgrade
+
+# Install python and git
+RUN apt-get -y install git python3-pip libpq-dev
+# install other stuff
+RUN apt-get -y install curl build-essential gettext locales
+
+RUN apt-get -y install nginx
+
+# upgrade pip
+RUN pip3 install --upgrade pip --break-system-packages
+
+RUN pip3 install -r requirements.txt --break-system-packages
+RUN pip3 install asgiref Django uwsgi packaging sqlparse typing_extensions tzdata --break-system-packages
+
+RUN mkdir /code
+run mkdir /var/www/static
+WORKDIR /code
