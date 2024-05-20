@@ -111,6 +111,12 @@ class IndexPage extends React.Component{
         engine.postMessage("uci");
         engine.postMessage("setoption name MultiPV value 4");
         engine.postMessage("setoption name Threads value " + window.navigator.hardwareConcurrency -2);
+		
+		engine.postMessage("setoption name wdldrawratereference value 0.58");
+		engine.postMessage("setoption name wdlcalibrationelo value 2700");
+		engine.postMessage("setoption name contempt value 400");
+		engine.postMessage("setoption name contemptmode value play");
+		engine.postMessage("setoption name wdlcontemptattenuation value 0.5");
 
         engine.postMessage("ucinewgame");
         this.setState({engine:engine});
